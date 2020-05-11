@@ -1,0 +1,82 @@
+$styles: blog;
+.#{$styles}{
+    background-color:$color_background_blog;
+    padding-top: 100px;
+    padding-bottom: 120px;
+    &__title {
+        @include Raleway_Bold_90;
+        color: $font_color_light;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    &__text {
+        text-align: center;
+        @include Raleway_Light_17;
+        color: $font_color_light;
+        margin-bottom: 50px;
+    }
+    &__button {
+        background-color: $color_button_blog;
+        @include Button_style;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+    &__button:hover {
+        @include Button_hover;
+    }
+    .button__link {
+        @include Button_link_style;
+    }
+    &__cards {
+        color: $font_color_light;
+        margin-bottom: 50px;  
+    }
+    &__card__items {
+        padding: 210px 42px 26px 36px;
+        background: url(../img/blog/blog__mohito.png) no-repeat center;
+        background-size: 92% 100%;
+        height: 310px;
+        position: relative;
+    }
+    &__card__items:nth-child(2) {
+        background: url(../img/blog/blog__soup.png) no-repeat center;
+        background-size: 92% 100%;
+        height: 310px;
+        
+    }
+    &__card__items:nth-child(3) {
+        background: url(../img/blog/Безимени-10.png) no-repeat center;
+        background-size: 92% 100%;
+        height: 310px;
+    }
+    
+    &__card__items__date {
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        top: 30px;
+        left: 45px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding : 8px;
+        margin-bottom: 120px;
+        @include Raleway_Bold_20;
+        background-color: $color_bg_blog_card_date;
+        opacity: 0.5;
+    }
+    &__card__items__title {
+        display: block;
+        @include Raleway_Bold_20;
+        margin-bottom: 20px;
+    }
+    &__card__items__autor {
+        display: block;
+    @include Raleway_Light_15;    
+    }
+    @media (max-width: 769px) {
+        &__cards { flex-direction:column; align-items: center; }
+        &__card__items {margin-bottom: 26px;}
+       
+}
+}

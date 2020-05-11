@@ -1,0 +1,63 @@
+$styles: contact;
+.#{$styles} {
+    background: url(../img/contact/contact_background.png) no-repeat;
+    padding-top: 100px;
+    padding-bottom: 120px;
+    @media (width: 375px) {
+       padding-bottom: 0px;
+    }
+    &__title  {
+        @include Raleway_Bold_90;
+        color:$font_color_dark;
+    }
+    &__text {
+        text-align: center;
+        @include Raleway_Light_17;
+        color:$font_color_dark;
+        margin-bottom: 45px;
+    }
+    input {
+        display: block;
+    }
+    &__input__name {
+        width: 100%;
+        height: 48px;
+        border: 1px solid transparent;
+        color: $color_text_contact_input;
+        @include Raleway_Light_17;
+        padding-left: 14px;
+        background-color: $color_bg_input_focus;
+        margin-bottom: 16px;
+        @include Placeholder_style;
+    }
+    &__input__email, &__input__phone, &__input__message {
+        width: 100%;
+        height: 48px;
+        border: 1px solid transparent;
+        @include Raleway_Light_17;
+        padding-left: 14px;
+        background-color: $color_bg_input;
+        margin-bottom: 16px;
+        @include Placeholder_style;
+    }
+    &__input__message {
+        margin-bottom: 0px;
+        height: 250px;
+    }
+    &__content-title {
+        @include Raleway_Bold_16;
+        margin-bottom: 10px;
+    }
+    &__content {
+        @include Raleway_Light_17;
+        margin-bottom: 18px;
+    }
+    &__input__email:focus, &__input__phone:focus, &__input__message:focus, &__input__name:focus {
+    border-left: 4px solid $color_input_border_focus;
+    } 
+    @media (max-width: 769px) {
+        &__form-wrapper { flex-direction:column; align-items: center; }
+        &__input__message {margin-bottom: 26px;}
+      }
+   
+}

@@ -1,0 +1,19 @@
+$styles :footer;
+.#{$styles} {
+    background-color: $color_background-footer;
+    padding-top: 33px;
+    padding-bottom: 31px;
+    &__text {
+        @include Raleway_Light_16;
+        color:$font_color_light;
+    }
+    &__autor {
+        @include Raleway_Light_15;
+        color:$font_color_light;  
+    }
+    &_autor-link  {
+        font-weight: $font_wight_bold;
+        color: $font_color_red;
+        text-decoration: none;
+    }
+}

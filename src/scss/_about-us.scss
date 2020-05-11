@@ -1,0 +1,24 @@
+$styles: about-us;
+.#{$styles} {
+    background-color: $color_background_about-us;
+    padding-top: 78px;
+    padding-bottom: 74px;
+    &__title {
+        color: $font_color_light;
+        @include Raleway_Bold_90;
+    }
+    &__text-top, &__text-bottom {
+        color: $font_color_light;
+        @include Raleway_Light_17;
+    }
+    &__text-top{
+        margin-bottom: 24px;
+    }
+    @media (max-width: 769px) {
+        &__wrapper { flex-direction:column; justify-content: center; }
+        &__text-top { flex-wrap: wrap;}
+      }
+      @media (max-width: 576px) {
+        &__logo {width: 70%; height: 70%;}
+      }
+}

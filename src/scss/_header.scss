@@ -1,0 +1,65 @@
+$styles: header;
+.#{$styles} {
+    background: url(../img/header/header_background_img.png) no-repeat center top;
+    background-size: cover;
+    padding-top: 50px;
+    padding-bottom:68px;
+    &__nav {
+        display: flex;
+    }
+    &__nav__items {
+        text-transform: uppercase;
+        font-family: $Raleway;
+        color: $font_color_dark;
+        font-weight: $font_wight_bold;
+        margin-right: 38px;
+        text-decoration: none;
+        transition: all 0.5s;
+        border-top: 2px solid transparent;
+        padding-top: 9px;
+    }
+    &__nav:last-child {
+        margin-right: 0px;
+    }
+    &__nav__items:hover {
+        border-top: 2px solid $color_top_line;
+    }
+    &__nav-bar {
+        margin-bottom: 200px;
+    }
+    &__title  {
+        @include Raleway_Heavy_60;
+        color: $font_color_dark;
+        margin-bottom: 34px;
+    }
+    &__text {
+        @include Raleway_Light_17;
+        color: $font_color_dark; 
+        margin-bottom: 30px;
+    }
+    &__button {
+        display: block;
+        background-color: $color_button_header;
+        @include Button_style;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        margin-bottom: 250px ;
+    }
+    &__button:hover {
+        @include Button_hover;
+    }
+    .button__link {
+        @include Button_link_style;
+    }
+    &__scroll {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    @media (max-width: 769px) {
+        &__logo {margin-bottom: 26px;}
+      }
+      @media (max-width: 576px) {
+        &__nav { flex-direction: column;}
+      }
+      
+}

@@ -1,0 +1,40 @@
+$styles: subscribe;
+.#{$styles} {
+    background-image: url(../img/subscribe/subscribe_background.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    padding-top: 146px;
+    padding-bottom: 165px;
+    &__title  {
+        @include Raleway_Bold_40;
+         color: $font_color_dark;
+         margin-bottom: 34px;
+     }
+     &__text {
+         @include Raleway_Light_15;
+         color: $font_color_dark;
+         margin-bottom: 34px;
+     
+     }
+     &__button {
+         width: 174px;
+         background-color: $color_button_subscribe;
+         @include Button_style;
+         @include Button_link_style;
+         box-shadow: 0 0 10px rgba(0,0,0,0.5);
+     }&__button:hover {
+         @include Button_hover;
+     }
+     
+     &__input {
+         width: 100%;
+         height: 54px;
+         border: 1px solid #262626;
+         color: $font_color_input;
+         @include Raleway_Light_17;
+         padding-left: 14px;
+     }
+     @media (max-width: 769px) {
+        &__input {margin-bottom: 26px;}
+      }
+}
