@@ -14,16 +14,17 @@ $styles: gallery;
         color: $font_color_dark;
         margin-bottom: 46px;
     }
-    &__button {
+    &__button__link {
+        display: block;
+        text-align: center;
+        padding-top: 14px;
+        @include Button_link_style;
         background-color:$color_button_gallery ;
         @include Button_style;
         box-shadow: 0 0 10px rgba(0,0,0,0.5);
     }
-    &__button:hover {
+    &__button__link:hover {
         @include Button_hover;
-    }
-    &__button__link {
-        @include Button_link_style;
     }
     &__img {
        max-width: 100%; 

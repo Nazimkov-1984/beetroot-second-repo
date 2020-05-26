@@ -52,6 +52,14 @@ $styles: contact;
         @include Raleway_Light_17;
         margin-bottom: 18px;
     }
+    &__content a {
+        text-decoration: none;
+        color: $font_color_dark;
+        transition: all .7s;   
+    }
+    &__content a:hover {
+        text-decoration: underline;
+    }
     &__input__email:focus, &__input__phone:focus, &__input__message:focus, &__input__name:focus {
     border-left: 4px solid $color_input_border_focus;
     } 

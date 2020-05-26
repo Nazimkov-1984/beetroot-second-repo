@@ -1,9 +1,11 @@
 $styles: header;
 .#{$styles} {
-    background: url(../img/header/header_background_img.png) no-repeat center top;
+    background: url(../img/header/header_background_img.jpg) no-repeat;
     background-size: cover;
+    background-position: center center;
     padding-top: 50px;
     padding-bottom:68px;
+    min-height: 100vh;
     &__nav {
         display: flex;
     }
@@ -12,11 +14,10 @@ $styles: header;
         font-family: $Raleway;
         color: $font_color_dark;
         font-weight: $font_wight_bold;
-        margin-right: 38px;
+        margin-right: 30px;
         text-decoration: none;
         transition: all 0.5s;
         border-top: 2px solid transparent;
-        padding-top: 9px;
     }
     &__nav:last-child {
         margin-right: 0px;
@@ -24,8 +25,8 @@ $styles: header;
     &__nav__items:hover {
         border-top: 2px solid $color_top_line;
     }
-    &__nav-bar {
-        margin-bottom: 200px;
+    &__title-wrapper {
+        min-height: 80vh; 
     }
     &__title  {
         @include Raleway_Heavy_60;
@@ -41,19 +42,31 @@ $styles: header;
         display: block;
         background-color: $color_button_header;
         @include Button_style;
-        box-shadow: 0 0 10px rgba(0,0,0,0.5);
-        margin-bottom: 250px ;
+       
     }
-    &__button:hover {
+    &__button__link:hover {
         @include Button_hover;
     }
-    .button__link {
-        @include Button_link_style;
+    &__button__link {
+        display: inline-block;
+    @include Button_link_style;
+    padding: 18px 24px 18px 24px;
+    transition: all 0.5s;
+    border-width: 3px;
+    border-style: solid;
+    border-color: transparent;
+    border-image: none;
+    border-radius: 1px; 
+    background-color: $color_button_header;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
     }
     &__scroll {
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+    &__scroll:hover {
+        transform: scale(1.2);   
     }
     @media (max-width: 769px) {
         &__logo {margin-bottom: 26px;}

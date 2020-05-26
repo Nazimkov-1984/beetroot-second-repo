@@ -8,12 +8,9 @@ $styles: our-servises;
     }
     .our_servises__title {
         position: absolute;
-        top: 50%;
-        left:0 ;
-        width: 100%;
-        transform: translateY(-45px);
         @include Raleway_Bold_90;
         color: $font_color_light;
+        top: 40%;
     }
     &__list-wrapper {
         display: flex;
@@ -43,6 +40,14 @@ $styles: our-servises;
         padding-top: 40px;
         padding-bottom: 40px;
         border-right: 2px solid $color_border_our_servises;
+    }
+    &__list__items__text a {
+        text-decoration: none;
+        color: $font_color_dark;
+        transition: all .7s;
+    }
+    &__list__items__text a:hover {
+        color: $color_top_line;
     }
     &__list__items__text-big {
         text-align: center;
